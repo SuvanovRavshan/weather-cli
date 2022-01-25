@@ -1,12 +1,15 @@
 {
-  "name": "weather-cli",
+  "name": "little-weather-cli-demo",
   "version": "1.0.0",
   "private": false,
   "description": "CLI for getting weather",
-  "main": "index.js",
-  "bin": "./index.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node weather.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,5 +26,10 @@
   "bugs": {
     "url": "https://purpleschool.ru",
     "email": "suvanovravsan@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "chalk": "^5.0.0",
+    "dedent-js": "^1.0.1"
   }
 }
