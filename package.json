@@ -1,6 +1,6 @@
 {
   "name": "little-weather-cli-demo",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": false,
   "description": "CLI for getting weather",
   "main": "weather.js",
@@ -18,13 +18,13 @@
   ],
   "author": "Ravshan Suvanov",
   "license": "ISC",
-  "homepage": "https://purpleschool.ru",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://purpleschool.ru"
+    "url": "https://github.com/SuvanovRavshan/weather-cli"
   },
   "bugs": {
-    "url": "https://purpleschool.ru",
+    "url": "https://github.com/SuvanovRavshan/weather-cli",
     "email": "suvanovravsan@gmail.com"
   },
   "dependencies": {
