@@ -22,4 +22,4 @@ weather
 
 ## License
 
-MIT
+ISC
