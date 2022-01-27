@@ -29,10 +29,10 @@ const getWeather = async () => {
     const token = process.env.TOKEN ?? await getKeyValue(TOKEN_DICTIONARY.token);
     const city = process.env.CITY ?? await getKeyValue(TOKEN_DICTIONARY.city);
     if(!token) {
-        throw new Error('Не задан ключ API, задайте его через команду -t [API_KEY]');
+        throw new Error('API key not set, set it via command -t [API_KEY]');
     }
     if(!city) {
-        throw new Error('Не задан город, задайте его через команду -s [CITY]');
+        throw new Error('The city is not set, set it through the command -s [CITY]');
     }
     const { data } = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
         params: {

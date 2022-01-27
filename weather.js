@@ -7,12 +7,12 @@ import {getIcon, getWeather} from "./services/api.service.js";
 const saveToken = async (token) => {
     if(!token.length)
     {
-        printError('Не передан токен');
+        printError('No token passed');
         return;
     }
     try {
         await saveKeyValue(TOKEN_DICTIONARY.token, token);
-        printSuccess(`Токен ${token} сохранен`);
+        printSuccess(`Token ${token} saved`);
     } catch (error) {
         printError(error.message);
     }
@@ -21,12 +21,12 @@ const saveToken = async (token) => {
 const saveCity = async (city) => {
     if(!city.length)
     {
-        printError('Не передан город');
+        printError('City not set');
         return;
     }
     try {
         await saveKeyValue(TOKEN_DICTIONARY.city, city);
-        printSuccess(`Город ${city} сохранен`);
+        printSuccess(`City ${city} saved`);
     } catch (error) {
         printError(error.message);
     }
@@ -39,9 +39,9 @@ const getForecast = async () => {
         printWeather(weather, getIcon(weather.weather[0].icon));
     } catch (e) {
         if(e?.response?.status === 404) {
-            printError('Неверно указан город');
+            printError('Invalid city');
         } else if(e?.response?.status === 401) {
-            printError('Неверно указан токен');
+            printError('Invalid token');
         } else {
             printError(e.message);
         }
